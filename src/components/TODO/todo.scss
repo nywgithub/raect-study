@@ -1,0 +1,20 @@
+.todo {
+  margin: 20px;
+  .bottom-area {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .buttom-clear {
+    color: red;
+    cursor: pointer;
+  }
+}
+.card-area {
+  margin: 20px;
+  display: flex;
+  flex-flow: wrap;
+  .card {
+    margin: 20px;
+  }
+}
