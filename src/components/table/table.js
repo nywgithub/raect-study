@@ -1,6 +1,6 @@
-import React from 'react'
-import {Table} from 'antd'
-
+import React from "react";
+import { Table } from "antd";
+import showDialog from "components/HOC/showDialog";
 
 const dataSource = [
   {
@@ -34,12 +34,10 @@ const columns = [
     key: "address",
   },
 ];
-class Tables extends React.Component{
-    render() {
-    return (
-      <Table dataSource={dataSource} columns={columns} />
-    );
+class Tables extends React.Component {
+  render() {
+    return <Table dataSource={dataSource} columns={columns} />;
   }
 }
 
-export default Tables;
+export default showDialog(Tables,'表格');
