@@ -20,6 +20,7 @@ class TODO extends React.Component {
   clearAll() {
     this.setState({
       listArr: [],
+      value: "",
     });
   }
 
@@ -61,6 +62,7 @@ class TODO extends React.Component {
             style={{ width: "80%" }}
             placeholder="请输入今日计划"
             onPressEnter={this.enter}
+            value={this.state.value}
             onChange={(event) => this.change(event)}
           />
 
