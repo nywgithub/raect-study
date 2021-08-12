@@ -1,0 +1,38 @@
+
+高阶组件：
+1.属性代理：在外层不影响内部参数
+2.反向代理：深入被包裹组件内部
+
+defaultProps：
+组件内部不可修改，可以通过父组件传递props值修改
+
+context:
+
+对使用的组件来说是“全局”变量，单独定义一个全局数据变量(react.createContext())。
+传递数据的父组件使用数据变量名.Provider标签，value属性为传递的具体数据值；
+接受数据的子组件static contextType = ThemeContext；通过this.context接收。
+
+refs：
+通过定义ref（ React.createRef()），可以获取组件的整个实例
+react Class 篇：
+refs转发:
+可以获取组件内部子组件的ref
+React.forwardRef((props, ref) => (
+  <button ref={ref} className="FancyButton">
+    {props.children}
+  </button>
+));
+
+第二个参数ref即为子组件的ref
+
+
+状态提升：
+原本props单独管理的两个组件，当数据需要同步时，两个单独的props都由调用他们的父组件传递
+
+组合继承（插槽）：
+this.props.children，父元素可以把子组件之外的内容传递进子组件
+
+
+react Hook 篇：
+
+

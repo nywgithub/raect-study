@@ -71,4 +71,4 @@ class Tables extends React.Component {
   }
 }
 
-export default showDialog("表格",false)(Tables);
+export default showDialog("表格")(Tables);
