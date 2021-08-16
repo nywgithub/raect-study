@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
+//挂载 Mock
+import './mock/index.js'
 import App from './views/App'
 import './index.scss'
 ReactDOM.render(
