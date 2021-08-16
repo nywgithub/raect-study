@@ -1,27 +1,28 @@
 import React from "react";
-
-//弹窗高阶组件
+import loadingHoc from "components/HOC/loadingHoc";
 
 //获取被包裹组件的组件名
 function getDisplayName(component) {
   return component.displayName || component.name || "Component";
 }
-
-function showDialog(WrappedComponent, isShow) {
+const showDialog = (isShow) => (WrappedComponent) => {
   return class HOC extends React.Component {
     //定义组件名
     static displayName = `HOC(${getDisplayName(WrappedComponent)})`;
     render() {
+      const newProps = {
+        test: false,
+      };
       return (
         <React.Fragment>
-          <div className="hoc-title">
-            {isShow ? isShow : "暂无标题"}
-            <WrappedComponent {...this.props} />
-          </div>
+                <div className="hoc-title">
+                    {isShow ? isShow : "暂无标题"}
+                    <WrappedComponent {...this.props} {...newProps} />
+                </div>
         </React.Fragment>
       );
     }
   };
-}
+};
 
-export default showDialog;
+export default showDialog()(showDialog);
