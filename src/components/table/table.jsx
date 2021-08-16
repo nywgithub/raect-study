@@ -1,7 +1,7 @@
 import React from "react";
 import { Table, Button } from "antd";
 import Modals from "components/Modal/modal";
-import showDialog from "components/HOC/showDialog";
+import loadingCheck from "components/HOC/loadingHoc";
 
 class Tables extends React.Component {
   constructor(props) {
@@ -71,4 +71,5 @@ class Tables extends React.Component {
   }
 }
 
-export default showDialog("表格")(Tables);
+export default loadingCheck(Tables,true);
+// export default Tables;
