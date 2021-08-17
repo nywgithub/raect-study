@@ -1,15 +1,15 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios';
 import { Select } from 'antd';
-
-function Select(props){
+const { Option } = Select;
+function Selects(props){
     const [defaultValue ,setDefaultValue] = useState("1")
     var getValue = ()=>{
         axios({
             url:"/postdata1",
             method:"get"
         }).then((res)=>{
-            setmockData(res.data.test)
+            setDefaultValue(res.data.test)
         })
     }
     useEffect(() => {
@@ -17,7 +17,7 @@ function Select(props){
     }, [defaultValue])
     return(
         <>
-            <Select defaultValue={defaultValue} style={{ width: 120 }} onChange={handleChange}>
+            <Select defaultValue={defaultValue} style={{ width: 120 }}>
                 <Option value="jack">Jack</Option>
                 <Option value="lucy">Lucy</Option>
                 <Option value="disabled" disabled>
