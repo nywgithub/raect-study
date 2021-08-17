@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios';
-import '../../mock/index.js'
+// import '../../mock/index.js'
 function Welcome (props){
     const [mockData, setmockData] = useState(); 
     useEffect(() => {
