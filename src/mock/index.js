@@ -11,5 +11,5 @@ export default Mock.mock('/postdata1','get',{
         // 属性 userId 是一个5位的随机码
         'userId|5': '',
     }],
-    test:'@cname'
+    test:'@cname' //随机中文名
 })

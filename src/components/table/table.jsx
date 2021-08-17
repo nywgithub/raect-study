@@ -71,5 +71,5 @@ class Tables extends React.Component {
   }
 }
 
-export default loadingCheck(Tables,true);
+export default loadingCheck(Tables,false);
 // export default Tables;

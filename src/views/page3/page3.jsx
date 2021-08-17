@@ -1,9 +1,9 @@
 import React from "react";
-import Tables from "components/table/table";
+import Selects from "components/Hook-Demo/select";
 function Page3() {
   return (
     <div>
-      <Tables />
+      <Selects />
     </div>
   );
 }
